@@ -1,0 +1,554 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./jquery.jsontree.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">jquery.jsontree使用示例</h2>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">JSON Tree</h3>
+                    </div>
+                    <div class="panel-body">
+                        
+                        <ul id="json-result-tree"></ul>
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-primary btn-block" id="getItems">获取已选择节点</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">事件结果</h3>
+                    </div>
+                    <div class="panel-body">
+                        <textarea id="result" class="form-control" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <hr/>
+                <div class="text-center"><i class="fa fa-github"></i><a href='https://github.com/tkggcelt' style="margin-left:6px;">tkggcelt</a></div>
+            </div>
+        </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="./jquery.jsontree.js"></script>
+    <script>
+    var myJson = {
+        "errno": "0",
+        "timestamp": "1450863205",
+        "data": {
+            "card": {
+                "mquery": {
+                    "status": "0",
+                    "dataset": {
+                        "modules": [],
+                        "mdext": [],
+                        "items": [{
+                            "fresher": {
+                                "resource_name": "news",
+                                "type": "2",
+                                "csrc": "app_cardcenter_txt",
+                                "mdsign": "6a21c41a2f4d3aaddc1dddb63908fc79",
+                                "pfid": "a014",
+                                "card_id": "014_%E4%BB%8A%E6%97%A5%E5%A4%B4%E6%9D%A1",
+                                "query": "focus",
+                                "word": "百度头条",
+                                "interval": "3600",
+                                "tplid": "2000",
+                                "latest": "1450863205",
+                                "cue": "9f1197273ab7a1ba9e97c09f68d117a0",
+                                "card_key": "014_今日头条"
+                            },
+                            "entity": {
+                                "mt_t": "百度头条",
+                                "hd_5_t": "百度头条",
+                                "hd_2_v": "VISIBLE",
+                                "s_cpt": "我在用@手机百度 看百度头条 http://m.baidu.com/news?tn=bdindex_baiduapp#index/focus",
+                                "hd_4_t": "",
+                                "b0_t": " ",
+                                "b0_img_u": " ",
+                                "scc_t1_t": "头条",
+                                "scc_ac1_ac": {
+                                    "type": "2",
+                                    "data": {
+                                        "id": "body",
+                                        "ta": "0",
+                                        "p": "4",
+                                        "a": [{
+                                            "aid": "@string/page-exchange-anim-ard",
+                                            "vid": "content_layout",
+                                            "dl": "0",
+                                            "k": ""
+                                        }]
+                                    },
+                                    "ubc": {
+                                        "uid": "015531",
+                                        "uv": "头条"
+                                    }
+                                },
+                                "scc_c_n1_tc.0": "#333333",
+                                "scc_t_1_v.0": "visible",
+                                "scc_c_n2_tc.0": "#999999",
+                                "scc_t_2_v.0": "gone",
+                                "scc_c_n3_tc.0": "#999999",
+                                "scc_t_3_v.0": "gone",
+                                "scc_c_n4_tc.0": "#999999",
+                                "scc_t_4_v.0": "gone",
+                                "scc_c_n1_tc.1": "#999999",
+                                "scc_t_1_v.1": "gone",
+                                "scc_c_n2_tc.1": "#333333",
+                                "scc_t_2_v.1": "visible",
+                                "scc_c_n3_tc.1": "#999999",
+                                "scc_t_3_v.1": "gone",
+                                "scc_c_n4_tc.1": "#999999",
+                                "scc_t_4_v.1": "gone",
+                                "scc_c_n1_tc.2": "#999999",
+                                "scc_t_1_v.2": "gone",
+                                "scc_c_n2_tc.2": "#999999",
+                                "scc_t_2_v.2": "gone",
+                                "scc_c_n3_tc.2": "#333333",
+                                "scc_t_3_v.2": "visible",
+                                "scc_c_n4_tc.2": "#999999",
+                                "scc_t_4_v.2": "gone",
+                                "scc_c_n1_tc.3": "#999999",
+                                "scc_t_1_v.3": "gone",
+                                "scc_c_n2_tc.3": "#999999",
+                                "scc_t_2_v.3": "gone",
+                                "scc_c_n3_tc.3": "#999999",
+                                "scc_t_3_v.3": "gone",
+                                "scc_c_n4_tc.3": "#333333",
+                                "scc_t_4_v.3": "visible",
+                                "color": "{\"scc_c_n1_tc.0\":\"c_card_main\",\"scc_c_n2_tc.0\":\"c_card_assist\",\"scc_c_n3_tc.0\":\"c_card_assist\",\"scc_c_n4_tc.0\":\"c_card_assist\",\"scc_c_n1_tc.1\":\"c_card_assist\",\"scc_c_n2_tc.1\":\"c_card_main\",\"scc_c_n3_tc.1\":\"c_card_assist\",\"scc_c_n4_tc.1\":\"c_card_assist\",\"scc_c_n1_tc.2\":\"c_card_assist\",\"scc_c_n2_tc.2\":\"c_card_assist\",\"scc_c_n3_tc.2\":\"c_card_main\",\"scc_c_n4_tc.2\":\"c_card_assist\",\"scc_c_n1_tc.3\":\"c_card_assist\",\"scc_c_n2_tc.3\":\"c_card_assist\",\"scc_c_n3_tc.3\":\"c_card_assist\",\"scc_c_n4_tc.3\":\"c_card_main\"}",
+                                "si_2_v.0": "gone",
+                                "si_1_scv.0": "true",
+                                "si_5_v.0": "gone",
+                                "si_3_t.0": "为赚100块佣金 百名大学生被骗80多万",
+                                "si_3_v.0": "visible",
+                                "si_1_u.0": "http://bcscdn.baidu.com/browserservice/browser_cms/d2/d2df69c6247a56720c4d1d4d7d735970.jpg",
+                                "si_0_ac.0": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "3",
+                                        "url": "/searchbox?action=tc&type=rct&src=search%3A%2F%2F%25E4%25B8%25BA100%25E5%259D%2597%25E8%25A2%25AB%25E9%25AA%259780%25E4%25B8%2587&sig=8c0890&cid=014_%25E4%25BB%258A%25E6%2597%25A5%25E5%25A4%25B4%25E6%259D%25A1&otype=2&ocsrc=app_cardcenter_txt&pos=n_0_1"
+                                    }
+                                },
+                                "sli_0_v.0": "VISIBLE",
+                                "sli1_0_v.0": "VISIBLE",
+                                "sli2_0_v.0": "VISIBLE",
+                                "sli3_0_v.0": "VISIBLE",
+                                "sli_1_v.0": "gone",
+                                "sli_2_bg.0": "@file/f_card_tag_post",
+                                "sli_2_v.0": "gone",
+                                "sli_9_v.0": "gone",
+                                "sli_4_t.0": "滑坡失联者家属:政府需要道歉",
+                                "sli_3_t.0": "[关注]",
+                                "sli_0_ac.0": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAA%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fnews.sohu.com%25252F20151223%25252Fn432351563.shtml%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3Dd9182d%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_0_0%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli1_1_v.0": "gone",
+                                "sli1_2_bg.0": "@file/f_card_tag_post",
+                                "sli1_2_v.0": "gone",
+                                "sli1_9_v.0": "gone",
+                                "sli1_4_t.0": "商务部研究员炮轰马云：无耻",
+                                "sli1_3_t.0": "[围观]",
+                                "sli1_0_ac.0": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAA%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fhelp.3g.163.com%25252F15%25252F1223%25252F13%25252FBBH90QK400963VRO.html%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3D9fc2cd%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_0_1%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli2_1_v.0": "gone",
+                                "sli2_2_bg.0": "@file/f_card_tag_post",
+                                "sli2_2_v.0": "gone",
+                                "sli2_9_v.0": "gone",
+                                "sli2_4_t.0": "北京4天内收限行罚款超1100万",
+                                "sli2_3_t.0": "[热评]",
+                                "sli2_0_ac.0": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAA%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fwww.chinanews.com%25252Fcj%25252F2015%25252F12-23%25252F7683390.shtml%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3D6634ed%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_0_2%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli3_1_v.0": "gone",
+                                "sli3_2_bg.0": "@file/f_card_tag_post",
+                                "sli3_2_v.0": "gone",
+                                "sli3_9_v.0": "gone",
+                                "sli3_4_t.0": "山西一医院治骨折致老人失生殖器",
+                                "sli3_3_t.0": "[万象]",
+                                "sli3_0_ac.0": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "3",
+                                        "url": "/searchbox?action=tc&type=rct&src=search%3A%2F%2F%25E6%25B2%25BB%25E9%25AA%25A8%25E6%258A%2598%25E5%25A4%25B1%25E7%2594%259F%25E6%25AE%2596%25E5%2599%25A8&sig=edb28d&cid=014_%25E4%25BB%258A%25E6%2597%25A5%25E5%25A4%25B4%25E6%259D%25A1&otype=2&ocsrc=app_cardcenter_txt&pos=b_0_3"
+                                    }
+                                },
+                                "scc_t2_t": "娱乐",
+                                "scc_ac2_ac": {
+                                    "type": "2",
+                                    "data": {
+                                        "id": "body",
+                                        "ta": "1",
+                                        "p": "4",
+                                        "a": [{
+                                            "aid": "@string/page-exchange-anim-ard",
+                                            "vid": "content_layout",
+                                            "dl": "0",
+                                            "k": ""
+                                        }]
+                                    },
+                                    "ubc": {
+                                        "uid": "015531",
+                                        "uv": "娱乐"
+                                    }
+                                },
+                                "si_2_v.1": "gone",
+                                "si_1_scv.1": "true",
+                                "si_5_v.1": "gone",
+                                "si_3_t.1": "《最强大脑》TFBOYS自拍 欺负经纪人",
+                                "si_3_v.1": "visible",
+                                "si_1_u.1": "http://bcscdn.baidu.com/browserservice/browser_cms/5d/5d4a72ad5ce10aa593e2f5ad8b5a1637.jpg",
+                                "si_0_ac.1": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAB%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fyule.sohu.com%25252F20151223%25252Fn432346249.shtml%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3D723e1c%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Dn_1_1%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli_0_v.1": "VISIBLE",
+                                "sli1_0_v.1": "VISIBLE",
+                                "sli2_0_v.1": "VISIBLE",
+                                "sli3_0_v.1": "VISIBLE",
+                                "sli_1_v.1": "gone",
+                                "sli_2_bg.1": "@file/f_card_tag_post",
+                                "sli_2_v.1": "gone",
+                                "sli_9_v.1": "gone",
+                                "sli_4_t.1": "李易峰：和冯小刚情投意合 把他喝趴",
+                                "sli_3_v.1": "gone",
+                                "sli_0_ac.1": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAB%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fent.ifeng.com%25252Fa%25252F20151223%25252F42550102_0.shtml%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3D6e5574%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_1_0%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli1_1_v.1": "gone",
+                                "sli1_2_bg.1": "@file/f_card_tag_post",
+                                "sli1_2_v.1": "gone",
+                                "sli1_9_v.1": "gone",
+                                "sli1_4_t.1": "Rain与女友好事近？ 密友:明年会结婚",
+                                "sli1_3_v.1": "gone",
+                                "sli1_0_ac.1": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAB%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fwww.chinanews.com%25252Fyl%25252F2015%25252F12-23%25252F7684682.shtml%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3Dedcb8b%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_1_1%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli2_1_v.1": "gone",
+                                "sli2_2_bg.1": "@file/f_card_tag_post",
+                                "sli2_2_v.1": "gone",
+                                "sli2_9_v.1": "gone",
+                                "sli2_4_t.1": "德普成好莱坞第一票房毒药",
+                                "sli2_3_v.1": "gone",
+                                "sli2_0_ac.1": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAB%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fgo.rss.sina.com.cn%25252Fredirect.php%25253Furl%25253Dhttp%25253A%25252F%25252Fent.sina.com.cn%25252Fm%25252Ff%25252F2015-12-23%25252Fdoc-ifxmueaa3714235.shtml%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3D00c2e1%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_1_2%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli3_1_v.1": "gone",
+                                "sli3_2_bg.1": "@file/f_card_tag_post",
+                                "sli3_2_v.1": "gone",
+                                "sli3_9_v.1": "gone",
+                                "sli3_4_t.1": "赵丽颖拆胡霍 胡歌\"献吻\"霍建华",
+                                "sli3_3_v.1": "gone",
+                                "sli3_0_ac.1": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAB%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Ffun.youth.cn%25252F2015%25252F1223%25252F3319501.shtml%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3D453a77%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_1_3%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "scc_t3_t": "体育",
+                                "scc_ac3_ac": {
+                                    "type": "2",
+                                    "data": {
+                                        "id": "body",
+                                        "ta": "2",
+                                        "p": "4",
+                                        "a": [{
+                                            "aid": "@string/page-exchange-anim-ard",
+                                            "vid": "content_layout",
+                                            "dl": "0",
+                                            "k": ""
+                                        }]
+                                    },
+                                    "ubc": {
+                                        "uid": "015531",
+                                        "uv": "体育"
+                                    }
+                                },
+                                "si_2_v.2": "gone",
+                                "si_1_scv.2": "true",
+                                "si_5_v.2": "gone",
+                                "si_3_t.2": "风云人物宁泽涛竞逐最佳男运动员",
+                                "si_3_v.2": "visible",
+                                "si_1_u.2": "http://bcscdn.baidu.com/browserservice/browser_cms/aa/aa0edbbeee7c822a9cdef83faf1ca6e0.jpg",
+                                "si_0_ac.2": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAD%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fsports.163.com%25252F15%25252F1223%25252F16%25252FBBHI9A3700051CAQ.html%252523p%25253DBBFB0QQ56OFD0005%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3Dab7a6b%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Dn_2_1%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli_0_v.2": "VISIBLE",
+                                "sli1_0_v.2": "VISIBLE",
+                                "sli2_0_v.2": "VISIBLE",
+                                "sli3_0_v.2": "VISIBLE",
+                                "sli_1_v.2": "gone",
+                                "sli_2_bg.2": "@file/f_card_tag_post",
+                                "sli_2_v.2": "gone",
+                                "sli_9_v.2": "gone",
+                                "sli_4_t.2": "媒曝舒马赫已能走路 遭经纪人否认",
+                                "sli_3_v.2": "gone",
+                                "sli_0_ac.2": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAD%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fsports.163.com%25252F15%25252F1223%25252F15%25252FBBHFFH9500051CDQ.html%252523p%25253D9HNS163400QR0005%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3D2a4c38%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_2_0%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli1_1_v.2": "gone",
+                                "sli1_2_bg.2": "@file/f_card_tag_post",
+                                "sli1_2_v.2": "gone",
+                                "sli1_9_v.2": "gone",
+                                "sli1_4_t.2": "李娜加盟真人秀 触电携手姚明孙杨",
+                                "sli1_3_v.2": "gone",
+                                "sli1_0_ac.2": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAD%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Ffinance.sina.com.cn%25252Fstock%25252Ft%25252F2015-12-23%25252Fdoc-ifxmttcq1847960.shtml%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3D66ae75%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_2_1%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli2_1_v.2": "gone",
+                                "sli2_2_bg.2": "@file/f_card_tag_post",
+                                "sli2_2_v.2": "gone",
+                                "sli2_9_v.2": "gone",
+                                "sli2_4_t.2": "富力高层盼陈志钊在富力终老",
+                                "sli2_3_v.2": "gone",
+                                "sli2_0_ac.2": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAD%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fm.sohu.com%25252Fn%25252F432348478%25252F%25253Fwscrid%25253D2107_1%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3D1ecfdc%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_2_2%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli3_1_v.2": "gone",
+                                "sli3_2_bg.2": "@file/f_card_tag_post",
+                                "sli3_2_v.2": "gone",
+                                "sli3_9_v.2": "gone",
+                                "sli3_4_t.2": "澳网女单资格赛报名名单 彭帅缺席",
+                                "sli3_3_v.2": "gone",
+                                "sli3_0_ac.2": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAD%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fm.sohu.com%25252Fn%25252F432345823%25252F%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3Dbf76f7%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_2_3%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "scc_t4_t": "社会",
+                                "scc_ac4_ac": {
+                                    "type": "2",
+                                    "data": {
+                                        "id": "body",
+                                        "ta": "3",
+                                        "p": "4",
+                                        "a": [{
+                                            "aid": "@string/page-exchange-anim-ard",
+                                            "vid": "content_layout",
+                                            "dl": "0",
+                                            "k": ""
+                                        }]
+                                    },
+                                    "ubc": {
+                                        "uid": "015531",
+                                        "uv": "社会"
+                                    }
+                                },
+                                "si_2_v.3": "gone",
+                                "si_1_scv.3": "true",
+                                "si_5_v.3": "gone",
+                                "si_3_t.3": "绿化带群羊吃草 放养人:过年吃肉",
+                                "si_3_v.3": "visible",
+                                "si_1_u.3": "http://bcscdn.baidu.com/browserservice/browser_cms/f2/f2a009770771e21dee036e59afb7d38a.jpg",
+                                "si_0_ac.3": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAG%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fnews.china.com%25252Fsocial%25252F1007%25252F20151223%25252F20998725.html%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3Df20bf1%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Dn_3_1%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli_0_v.3": "VISIBLE",
+                                "sli1_0_v.3": "VISIBLE",
+                                "sli2_0_v.3": "VISIBLE",
+                                "sli3_0_v.3": "VISIBLE",
+                                "sli_1_v.3": "gone",
+                                "sli_2_bg.3": "@file/f_card_tag_post",
+                                "sli_2_v.3": "gone",
+                                "sli_9_v.3": "gone",
+                                "sli_4_t.3": "华为公司内部文件:禁止员工陪客户时喝假酒",
+                                "sli_3_v.3": "gone",
+                                "sli_0_ac.3": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAG%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fnews.163.com%25252F15%25252F1223%25252F15%25252FBBHHKVG000014AED.html%252523f%25253Dsupdate%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3Db1b2fb%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_3_0%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli1_1_v.3": "gone",
+                                "sli1_2_bg.3": "@file/f_card_tag_post",
+                                "sli1_2_v.3": "gone",
+                                "sli1_9_v.3": "gone",
+                                "sli1_4_t.3": "市民想绿植吸霾 专家:没实质效果",
+                                "sli1_3_v.3": "gone",
+                                "sli1_0_ac.3": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAG%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fwww.chinanews.com%25252Fsh%25252F2015%25252F12-23%25252F7684576.shtml%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3Da8639a%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_3_1%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli2_1_v.3": "gone",
+                                "sli2_2_bg.3": "@file/f_card_tag_post",
+                                "sli2_2_v.3": "gone",
+                                "sli2_9_v.3": "gone",
+                                "sli2_4_t.3": "广州现古生物化石 部分已被烧成砖",
+                                "sli2_3_v.3": "gone",
+                                "sli2_0_ac.3": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAG%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fnews.163.com%25252F15%25252F1223%25252F14%25252FBBHCANV3000146BE.html%252523f%25253Dsupdate%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3D3a7263%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_3_2%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "sli3_1_v.3": "gone",
+                                "sli3_2_bg.3": "@file/f_card_tag_post",
+                                "sli3_2_v.3": "gone",
+                                "sli3_9_v.3": "gone",
+                                "sli3_4_t.3": "老太买保健品 其中竟有妇女丰乳片",
+                                "sli3_3_v.3": "gone",
+                                "sli3_0_ac.3": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.bdsb_light_start_url=http%3A%2F%2Fm.baidu.com%2Fsearchbox%3Faction%3Dtc%26type%3Drct%26src%3Dhttp%253A%252F%252Fm.toutiao.baidu.com%252F%2523%252Fgatena%253Fsid%253DAG%2526prod%253Dbdk%2526src%253Dhttp%25253A%25252F%25252Fwww.chinanews.com%25252Fsh%25252F2015%25252F12-23%25252F7684346.shtml%2526ua%253D720_1280_android_7.1_320%2526cuid%253D83EF565001EE73C2978A9988073DD843%257C413635520885868%2526device%253Dios%2526cfrom%253D757b%2526from%253D757b%2526%26sig%3D4fec10%26cid%3D014_%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E5%2525A4%2525B4%2525E6%25259D%2525A1%26otype%3D2%26ocsrc%3Dapp_cardcenter_txt%26pos%3Db_3_3%26service%3Dbdbox%26osname%3Dbaiduboxapp%26ua%3D720_1280_android_7.1_320%26ut%3Dvivo%2BX5M_5.0.2_21_vivo%26from%3D757b%26cfrom%3D757b%26uid%3D83EF565001EE73C2978A9988073DD843%257C413635520885868%26osbranch%3Da0%26pkgname%3Dcom.baidu.searchbox%26network%3D1_0%26ctv%3D2%26cen%3Duid_ua_ut%26typeid%3D0;B.bdsb_append_param=false;end",
+                                        "class": "com.baidu.searchbox.news.NewsDetailHomeActivity",
+                                        "min_v": "16788480"
+                                    }
+                                },
+                                "ft_0_t": "查看更多",
+                                "ft_1_i": "@file/f_card_more",
+                                "ft_2_t": "手机百度",
+                                "ft_3_ac": {
+                                    "type": "1",
+                                    "data": {
+                                        "mode": "0",
+                                        "intent": "intent:#Intent;S.SID=AA;end",
+                                        "class": "com.baidu.searchbox.news.NewsMainActivity",
+                                        "min_v": "16788480"
+                                    },
+                                    "clk": "030194"
+                                }
+                            }
+                        }]
+                    }
+                }
+            }
+        },
+        "logid": "2005615484",
+        "mac": "10.223.94.45"
+    };
+    $(function() {
+        $("#json-result-tree").jsontree({
+            json: myJson
+        });
+
+        $("#json-result-tree").on("unselected.item.jsontree", function(ev, data) {
+            var result = {
+                "event" : "unselected",
+                "itemInfo": data.data
+            };
+            $("#result").val("========================unselected========================\n" + JSON.stringify(result, null, 4) + "\n=========" + new Date() + "=========\n");
+        }).on("selected.item.jsontree", function(ev, data) {
+            var result = {
+                "event" : "selected",
+                "itemInfo": data.data
+            };
+            $("#result").val("========================selected========================\n" + JSON.stringify(result, null, 4) + "\n=========" + new Date() + "=========\n");
+        });
+        $("#getItems").click(function(){
+            var result = $("#json-result-tree").jsontree("getSelectedItems");
+            $("#result").val("========================all selected========================\n" + JSON.stringify(result, null, 4) + "\n=========" + new Date() + "=========\n");
+        });
+    });
+    </script>
+</body>
+
+</html>
